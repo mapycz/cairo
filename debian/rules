@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autoreconf --parallel
+
+configure_flags += \
+		--prefix=/opt/szn/cairo \
+        --enable-pdf \
+        --enable-ps \
+        --enable-xlib \
+        --enable-png \
+        --enable-tee \
+        --disable-silent-rules \
+        --disable-maintainer-mode \
+        --enable-xlib \
+        --enable-svg \
+        --enable-xcb \
+        --enable-perf-utils \
+        --disable-gl
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(configure_flags)
+
+override_dh_autoreconf:
+	./autogen.sh
+
+override_dh_auto_test:
+	echo "Tests are disabled"
