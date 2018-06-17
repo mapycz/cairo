@@ -23,7 +23,11 @@ Build-Depends:
     libxcb-shm0-dev,
     libglib2.0-dev,
     zlib1g-dev,
-    liblzo2-dev
+    liblzo2-dev,
+    libpoppler-glib-dev,
+    librsvg2-dev,
+    libspectre-dev,
+    ghostscript
 
 Package: szn-libcairo
 Section: devel
