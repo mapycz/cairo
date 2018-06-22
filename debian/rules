@@ -3,20 +3,24 @@
 %:
 	dh $@ --with autoreconf --parallel
 
+export LDFLAGS=-Wl,-rpath=/opt/szn/freetype/lib/x86_64-linux-gnu/
+export FREETYPE_CFLAGS="-I/opt/szn/freetype/include/freetype2"
+export FREETYPE_LIBS="-lfreetype -L/opt/szn/freetype/lib/x86_64-linux-gnu"
+
 configure_flags += \
-		--prefix=/opt/szn/cairo \
-        --enable-pdf \
-        --enable-ps \
-        --enable-xlib \
-        --enable-png \
-        --enable-tee \
-        --disable-silent-rules \
-        --disable-maintainer-mode \
-        --enable-xlib \
-        --enable-svg \
-        --enable-xcb \
-        --enable-perf-utils \
-        --disable-gl
+	--prefix=/opt/szn/cairo \
+	--enable-pdf \
+	--enable-ps \
+	--enable-xlib \
+	--enable-png \
+	--enable-tee \
+	--disable-silent-rules \
+	--disable-maintainer-mode \
+	--enable-xlib \
+	--enable-svg \
+	--enable-xcb \
+	--enable-perf-utils \
+	--disable-gl
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(configure_flags)
