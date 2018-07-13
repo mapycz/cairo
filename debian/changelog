@@ -1,3 +1,9 @@
+szn-libcairo (1.15.12) Seznam; urgency=medium
+
+  * Depend on szn-libfreetype
+
+ -- Jiri Drbalek <jiri.drbalek@firma.seznam.cz>  Fri, 22 Jun 2018 13:59:51 +0200
+
 szn-libcairo (1.15.11) Seznam; urgency=medium
 
   * pdf: Keep clip outside of surface extent
