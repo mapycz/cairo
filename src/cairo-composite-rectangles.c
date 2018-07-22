@@ -85,6 +85,8 @@ _cairo_composite_rectangles_init (cairo_composite_rectangles_t *extents,
     _cairo_surface_get_extents (surface, &extents->destination);
     extents->clip = NULL;
 
+    extents->mask = extents->destination;
+
     extents->unbounded = extents->destination;
     if (clip && ! _cairo_rectangle_intersect (&extents->unbounded,
 					      _cairo_clip_get_extents (clip)))
@@ -443,10 +445,12 @@ _cairo_composite_rectangles_init_for_glyphs (cairo_composite_rectangles_t *exten
 	    return CAIRO_INT_STATUS_NOTHING_TO_DO;
     }
 
+	/*
     status = _cairo_scaled_font_glyph_device_extents (scaled_font,
 						      glyphs, num_glyphs,
 						      &extents->mask,
 						      overlap);
+							  */
     if (unlikely (status))
 	return status;
 
