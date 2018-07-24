@@ -1,3 +1,9 @@
+szn-libcairo (1.15.13) Seznam; urgency=medium
+
+  * Hotfix: Disable glyph clipping
+
+ -- Jiri Drbalek <jiri.drbalek@firma.seznam.cz>  Sun, 22 Jul 2018 22:41:35 +0200
+
 szn-libcairo (1.15.12) Seznam; urgency=medium
 
   * Depend on szn-libfreetype
