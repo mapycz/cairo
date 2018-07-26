@@ -5,8 +5,8 @@
 
 export LDFLAGS=-Wl,-rpath=/opt/szn/freetype/lib/x86_64-linux-gnu/
 export PKG_CONFIG_PATH=/opt/szn/freetype/lib/x86_64-linux-gnu/pkgconfig
-export FREETYPE_CFLAGS="-I/opt/szn/freetype/include/freetype2"
-export FREETYPE_LIBS="-lfreetype -L/opt/szn/freetype/lib/x86_64-linux-gnu"
+export FREETYPE_CFLAGS=-I/opt/szn/freetype/include/freetype2
+export FREETYPE_LIBS=-lfreetype -L/opt/szn/freetype/lib/x86_64-linux-gnu
 
 configure_flags += \
 	--prefix=/opt/szn/cairo \
