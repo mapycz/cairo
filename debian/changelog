@@ -1,3 +1,10 @@
+szn-libcairo (1.15.14) Seznam; urgency=medium
+
+  * Set PKG_CONFIG_PATH for Freetype
+  * Fixed building against szn-libfreetype
+
+ -- Jiri Drbalek <jiri.drbalek@firma.seznam.cz>  Thu, 26 Jul 2018 21:57:52 +0200
+
 szn-libcairo (1.15.13) Seznam; urgency=medium
 
   * Hotfix: Disable glyph clipping
