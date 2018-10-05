@@ -227,7 +227,8 @@ _add_operation (cairo_analysis_surface_t *surface,
 	    backend_status = CAIRO_INT_STATUS_SUCCESS;
     }
 
-    if (backend_status == CAIRO_INT_STATUS_SUCCESS) {
+    if (backend_status == CAIRO_INT_STATUS_SUCCESS ||
+        backend_status == CAIRO_INT_STATUS_NOTHING_TO_DO) {
 	/* Add the operation to the supported region. Operations in
 	 * this region will be emitted as native operations.
 	 */
